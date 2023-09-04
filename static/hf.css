@@ -1,5 +1,5 @@
 body {
-  font-family:      Verdana, Geneva, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size:        medium;
   background-color: tan;
   margin-top:       5%;
@@ -10,8 +10,8 @@ body {
   padding:          10px 10px 10px 10px;
 }
 a {
-  text-decoration:  none; 
-  font-weight:      600; 
+  text-decoration:  none;
+  font-weight:      600;
 }
 a:hover {
   text-decoration:  underline;
@@ -41,7 +41,7 @@ td, th {
   font-style:       italic;
 }
 .confirmentry {
-  font-weight:      600; 
+  font-weight:      600;
 }
 
 /*** Tables ***/
