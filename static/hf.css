@@ -1,7 +1,6 @@
 body {
+  box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-  font-size:        medium;
-  background-color: tan;
   margin-top:       5%;
   margin-bottom:    5%;
   margin-left:      10%;
@@ -61,7 +60,6 @@ border:             thin dotted gray;
 
 /*** Inputs ***/
 input[type=text] {
-  font-size:        115%;
   width:            30em;
 }
 input[type=submit] {
@@ -69,4 +67,9 @@ input[type=submit] {
 }
 select {
   font-size:        125%;
+}
+
+textarea {
+  width:            30em;
+  resize: vertical;
 }
