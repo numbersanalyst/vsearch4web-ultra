@@ -1,9 +1,18 @@
-body {
+* {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
 
 textarea {
-  width:            30em;
+  height: 140px;
   resize: vertical;
+}
+
+input,
+textarea {
+  width: 500px;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 16px;
+  border: 1px solid gray;
 }
