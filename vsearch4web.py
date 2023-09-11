@@ -75,7 +75,7 @@ def do_search() -> 'html':
 @app.route('/entry')
 def entry_page() -> 'html':
     return render_template('entry.html',
-                           the_title='Witamy na stronie internetowej search4letters!')
+                           the_title='Welcome to the search4letters website!')
 
 
 @app.route('/viewlog')
