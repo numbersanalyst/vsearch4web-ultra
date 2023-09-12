@@ -2,22 +2,24 @@
 
 {% block body %}
 
-<h2>{{ the_title }} </h2>
+<div>
+    <h2>{{ the_title }} </h2>
 
-<p>Podałeś następujące dane:</p>
-<table>
-    <tr>
-        <td>Fraza:</td>
-        <td>{{ the_phrase }} </td>
-    </tr>
-    <tr>
-        <td>Litery:</td>
-        <td>{{ the_letters }} </td>
-    </tr>
-</table>
+    <p>You have provided the following data:</p>
+    <table>
+        <tr>
+            <td>Phrase:</td>
+            <td>{{ the_phrase }} </td>
+        </tr>
+        <tr>
+            <td>Letters:</td>
+            <td>{{ the_letters }} </td>
+        </tr>
+    </table>
 
-<p>Gdy we frazie „{{the_phrase }}” wyszuka się litery „{{ the_letters }}”,
-    zwrócone zostaną następujące wyniki:</p>
-<h3>{{ the_results }} </h3>
+    <p>When the letters "{{the_phrase }}" are searched in the phrase "{{ the_letters }}"
+        the following results will be returned:</p>
+    <h3>{{ the_results }} </h3>
+</div>
 
 {% endblock %}

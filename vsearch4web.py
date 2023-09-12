@@ -57,7 +57,7 @@ def do_search() -> 'html':
 
     phrase = request.form['phrase']
     letters = request.form['letters']
-    title = 'Oto wyniki twojego wyszukiwania:'
+    title = 'Results of your searching:'
     results = str(search4letters(phrase, letters))
     try:
         t = Thread(target=log_request, args=(request, results))
