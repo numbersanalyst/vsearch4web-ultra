@@ -2,24 +2,38 @@
 
 {% block body %}
 
-<div>
-    <h2>{{ the_title }} </h2>
+<div class="flex justify-between gap-20">
+    <div>
+        <h2 class="mb-4 text-2xl font-semibold">{{ the_title }} </h2>
 
-    <p>You have provided the following data:</p>
-    <table>
-        <tr>
-            <td>Phrase:</td>
-            <td>{{ the_phrase }} </td>
-        </tr>
-        <tr>
-            <td>Letters:</td>
-            <td>{{ the_letters }} </td>
-        </tr>
-    </table>
+        <p class="mb-7">You have provided the following data:</p>
 
-    <p>When the letters "{{the_phrase }}" are searched in the phrase "{{ the_letters }}"
-        the following results will be returned:</p>
-    <h3>{{ the_results }} </h3>
+        <div class="mb-6">
+            <label for="phrase" class="block mb-2 text-sm font-medium">Pharse</label>
+            <textarea id="phrase" name="phrase"
+                class="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500 h-40 max-h-64"
+                placeholder="{{ the_phrase }}" disabled></textarea>
+        </div>
+        <div class="mb-6">
+            <label for="letters" class="block mb-2 text-sm font-medium">Letters</label>
+            <input type="letters" id="letters" name="letters"
+                class="block w-full p-2 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="{{ the_letters }}" disabled />
+        </div>
+    </div>
+    <div>
+        <p class="mb-5">Found letters in phrase:</p>
+        <div
+            class="w-20 h-20 bg-green-300 rounded-lg shadow-2xl shadow-green-500 flex flex-col justify-center items-center ">
+            <span class="text-2xl font-semibold">a</span>
+            <p class="text-gray-200">found 2</p>
+        </div>
+        <p class="mt-8 mb-5">Not found letters in phrase:</p>
+        <div
+            class="w-12 h-12 bg-gray-500 rounded-lg shadow-2xl shadow-gray-500 flex flex-col justify-center items-center ">
+            <span class="text-2xl font-semibold">b</span>
+        </div>
+    </div>
 </div>
 
 {% endblock %}
