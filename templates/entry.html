@@ -4,18 +4,18 @@
 
 <div class="flex justify-between gap-20">
     <div>
-        <h2 class="text-white mb-4 text-2xl font-semibold">{{ the_title }}</h2>
+        <h2 class="mb-4 text-2xl font-semibold">{{ the_title }}</h2>
         <p class="text-gray-200 mb-12">Enter data into the form to get results</p>
         <div class="relative">
             <div
                 class="w-40 h-40 rounded-xl bg-green-300 shadow-2xl shadow-green-600 rotate-6 translate-x-36 translate-y-8 motion-safe:animate-pulse">
             </div>
-            <svg class="w-[200px] h-[200px] text-gray-800 dark:text-white absolute top-16 left-60" aria-hidden="true"
+            <svg class="w-[200px] h-[200px] absolute top-16 left-60" aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.6"
                     d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
             </svg>
-            <svg class="w-[210px] h-[210px] text-gray-800 dark:text-white absolute -top-6 left-2" aria-hidden="true"
+            <svg class="w-[210px] h-[210px] absolute -top-6 left-2" aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.1"
                     d="M3 1h8M1 5h12M3 9h8M1 13h12" />
@@ -27,16 +27,16 @@
         <div class="mb-6">
             <label for="phrase" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pharse</label>
             <textarea id="phrase" name="phrase"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 h-40 max-h-64"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500 h-40 max-h-64"
                 placeholder="E.g. You Can't Teach an Old Dog New Tricks" required></textarea>
         </div>
         <div class="mb-6">
             <label for="letters" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Letters</label>
             <input type="letters" id="letters" name="letters"
-                class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="aeiou" required />
         </div>
-        <p class="text-white my-4">When you are ready, click this button:</p>
+        <p class="my-4">When you are ready, click this button:</p>
         <p>
             <input
                 class="text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800 cursor-pointer w-full"
