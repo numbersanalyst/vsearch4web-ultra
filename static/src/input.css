@@ -10,13 +10,13 @@ main {
     @apply flex justify-center items-center min-h-screen;
 }
 
-.title {
-    @apply mb-4;
-}
-
 .title,
 .prim-text {
     @apply text-2xl font-semibold;
+}
+
+.title {
+    @apply mb-4 font-bold bg-gradient-to-r from-gray-100 via-stone-300 to-green-300 bg-clip-text text-transparent;
 }
 
 .main-containter {

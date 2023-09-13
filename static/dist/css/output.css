@@ -1120,15 +1120,26 @@ main {
   justify-content: center;
 }
 
-.title {
-  margin-bottom: 1rem;
-}
-
 .title,
 .prim-text {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;
+}
+
+.title {
+  margin-bottom: 1rem;
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #f3f4f6 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(243 244 246 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: rgb(214 211 209 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #d6d3d1 var(--tw-gradient-via-position), var(--tw-gradient-to);
+  --tw-gradient-to: #86efac var(--tw-gradient-to-position);
+  -webkit-background-clip: text;
+          background-clip: text;
+  font-weight: 700;
+  color: transparent;
 }
 
 .main-containter {
