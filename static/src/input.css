@@ -28,7 +28,7 @@ main {
 }
 
 .green-box {
-    @apply rounded-xl bg-green-300 shadow-2xl shadow-green-600;
+    @apply rounded-xl bg-green-400 shadow-2xl shadow-green-600;
 }
 
 .gray-box {
