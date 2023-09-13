@@ -1,3 +1,65 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    @apply bg-gray-800 text-white;
+}
+
+main {
+    @apply flex justify-center items-center min-h-screen;
+}
+
+.title {
+    @apply mb-4;
+}
+
+.title,
+.prim-text {
+    @apply text-2xl font-semibold;
+}
+
+.main-containter {
+    @apply flex justify-between gap-20;
+}
+
+.basic-label {
+    @apply block mb-2 text-sm font-medium;
+}
+
+.green-box {
+    @apply rounded-xl bg-green-300 shadow-2xl shadow-green-600;
+}
+
+.gray-box {
+    @apply bg-gray-500 rounded-lg shadow-2xl shadow-gray-500;
+}
+
+.unregular-box {
+    @apply w-40 h-40 rotate-6 translate-x-36 translate-y-8;
+}
+
+.regular-box,
+.regular-sm-box {
+    @apply flex flex-col justify-center items-center;
+}
+
+.regular-box {
+    @apply w-20 h-20;
+}
+
+.regular-sm-box {
+    @apply w-12 h-12;
+}
+
+textarea {
+    @apply h-40 max-h-64
+}
+
+.input-bar {
+    @apply block w-full p-2 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500
+}
+
+.submit-btn {
+    @apply text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800 cursor-pointer w-full;
+}
