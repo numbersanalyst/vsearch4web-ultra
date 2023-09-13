@@ -2,18 +2,14 @@
 module.exports = {
   darkMode: 'class',
   content: [
-      "./templates/**/*.html",
-      "./static/src/**/*.js",
-      "./node_modules/flowbite/**/*.js"
+    "./templates/**/*.html",
+    "./static/src/**/*.js",
+    "./node_modules/flowbite/**/*.js"
   ],
   theme: {
-    extend: {
-      width: {
-        panel: '900px',
-      },
-    },
-  },
-  plugins: [
-    require("flowbite/plugin")
-  ],
+    extend: {},
+    plugins: [
+      require("flowbite/plugin")
+    ],
+  }
 }
