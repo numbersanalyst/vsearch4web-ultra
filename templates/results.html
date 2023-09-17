@@ -20,15 +20,19 @@
             </div>
         </div>
         <div>
+            {% for k,v in found.items() %}
             <p class="mb-5">Found letters in phrase:</p>
             <div class="green-box regular-box">
-                <span class="prim-text">a</span>
-                <p class="text-gray-200">found 2</p>
+                <span class="prim-text">{{k}}</span>
+                <p class="text-gray-200">{{v}}</p>
             </div>
+            {% endfor %}
+            {% for letter in not_found %}
             <p class="mt-8 mb-5">Not found letters in phrase:</p>
             <div class="gray-box regular-sm-box">
-                <span class="prim-text">b</span>
+                <span class="prim-text">{{letter}}</span>
             </div>
+            {% endfor %}
         </div>
     </div>
 </main>
