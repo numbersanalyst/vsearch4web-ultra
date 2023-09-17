@@ -29,10 +29,20 @@
                 <textarea id="phrase" name="phrase" class="input-bar"
                     placeholder="E.g. You Can't Teach an Old Dog New Tricks" required></textarea>
             </div>
+
             <div class="mb-6">
                 <label for="letters" class="basic-label">Letters</label>
                 <input type="letters" id="letters" name="letters" class="input-bar" placeholder="aeiou" required />
             </div>
+
+            <label class="toogle-label">
+                <input type="checkbox" name="sensitive" value="checked" class="sr-only peer">
+                <div
+                    class="toogle-div peer">
+                </div>
+                <span class="ml-5">Case sensitive</span>
+            </label>
+
             <p class="my-4">When you are ready, click this button:</p>
             <p>
                 <input class="submit-btn" value="Do it!" type="SUBMIT" />

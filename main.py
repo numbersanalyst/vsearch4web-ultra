@@ -57,8 +57,10 @@ def do_search() -> 'html':
 
     phrase = request.form['phrase']
     letters = request.form['letters']
+    checkbox_sensitive = request.form.get("sensitive") != "checked"
+
     title = 'Results of your searching:'
-    found_letters, not_found_letters = search4letters(phrase, letters)
+    found_letters, not_found_letters = search4letters(phrase, letters, checkbox_sensitive)
     try:
         t = Thread(target=log_request, args=(request, found_letters))
         t.start()
