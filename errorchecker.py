@@ -15,4 +15,4 @@ def check_for_errors(func):
             print('***** Czy Twoje zapytanie jest poprawne? Błąd:', str(err))
         except Exception as err:
             print('***** Coś poszło źle:', str(err))
-    return wrapper()
+    return wrapper
