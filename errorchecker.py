@@ -6,7 +6,7 @@ def check_for_errors(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
         try:
-            func(*args, **kwargs)
+            return func(*args, **kwargs)
         except ConnectionError as err:
             print('***** Czy twoja baza danych jest włączona? Błąd:', str(err))
         except CredentialsError as err:

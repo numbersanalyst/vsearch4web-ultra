@@ -23,24 +23,24 @@
             {% if found %}
             <p class="mb-5">Found letters in phrase:</p>
             <div class="letters-grid">
-                {% for k, v in found.items() %}
+                {% for k in sorted_keys %}
                 <div class="green-box regular-box">
                     <span class="prim-text">{{k}}</span>
-                    <p class="text-gray-200">{{v}}</p>
+                    <p class="text-gray-200">{{found[k]}}</p>
                 </div>
                 {% endfor %}
             </div>
             {% endif%}
 
             {% if not_found %}
-                <p class="mt-8 mb-5">Not found letters in phrase:</p>
-                <div class="letters-grid">
-                    {% for letter in not_found %}
-                    <div class="gray-box regular-sm-box">
-                        <span class="prim-text">{{letter}}</span>
-                    </div>
-                    {% endfor %}
+            <p class="mt-8 mb-5">Not found letters in phrase:</p>
+            <div class="letters-grid">
+                {% for letter in not_found %}
+                <div class="gray-box regular-sm-box">
+                    <span class="prim-text">{{letter}}</span>
                 </div>
+                {% endfor %}
+            </div>
             {% endif %}
         </div>
     </div>
