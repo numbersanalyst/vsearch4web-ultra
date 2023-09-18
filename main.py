@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, escape, session
+from flask import Flask, render_template, request, session
 from flask import copy_current_request_context
 
 from DBcm import UseDatabase
