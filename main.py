@@ -90,14 +90,14 @@ def entry_page() -> 'html':
 def view_the_log() -> 'html':
     """Wyświetla zawartość pliku logu w postaci tabeli HTML."""
     with UseDatabase(app.config['dbconfig']) as cursor:
-        _SQL = """select phrase, letters, ip, browser_string, results from log"""
+        _SQL = """select ts, phrase, letters, ip, browser_string, results from log"""
         cursor.execute(_SQL)
         contents = cursor.fetchall()
 
-    titles = ('Fraza', 'Litery', 'Adres klienta',
-              'Agent użytkownika', 'Wyniki')
+    titles = ('Date', 'Pharse', 'Letters', 'Ip Address',
+              'User Agent', 'Results')
     return render_template('viewlog.html',
-                           the_title='Widok logu',
+                           the_title='View log',
                            the_row_titles=titles,
                            the_data=contents)
 

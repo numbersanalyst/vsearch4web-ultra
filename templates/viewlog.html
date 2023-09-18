@@ -2,21 +2,31 @@
 
 {% block body %}
 
-<h2>{{ the_title }}</h2>
+<main>
+    <div class="main-container my-10">
 
-<table>
-    <tr>
-        {% for row_title in the_row_titles %}
-        <th>{{row_title}}</th>
-        {% endfor %}
-    </tr>
-    {% for log_row in the_data %}
-    <tr>
-        {% for item in log_row %}
-        <td>{{item}}</td>
-        {% endfor %}
-    </tr>
-    {% endfor %}
-</table>
+        <h2 class="title">{{ the_title }}</h2>
+
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                <thead class="text-s text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        {% for row_title in the_row_titles %}
+                        <th scope="col" class="px-6 py-3">{{row_title}}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                {% for log_row in the_data %}
+                <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+                    {% for item in log_row %}
+                    <td class="px-6 py-4">{{item}}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</main>
+
 
 {% endblock %}
