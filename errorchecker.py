@@ -8,11 +8,11 @@ def check_for_errors(func):
         try:
             return func(*args, **kwargs)
         except ConnectionError as err:
-            print('***** Czy twoja baza danych jest włączona? Błąd:', str(err))
+            print('***** Is your database is turned on? Error:', str(err))
         except CredentialsError as err:
-            print('***** Problemy z identyfikatorem użytkownika lub hasłem dostępu. Błąd:', str(err))
+            print('***** Problem with user id or access password. Error:', str(err))
         except SQLError as err:
-            print('***** Czy Twoje zapytanie jest poprawne? Błąd:', str(err))
+            print('***** Is your inquiry is valid? Error:', str(err))
         except Exception as err:
-            print('***** Coś poszło źle:', str(err))
+            print('***** Something went wrong:', str(err))
     return wrapper

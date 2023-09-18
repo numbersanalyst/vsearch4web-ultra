@@ -21,13 +21,13 @@ app.secret_key = 'NigdyNieZgadnieszMojegoTajnegoKlucza'
 @app.route('/login')
 def do_login() -> str:
     session['logged_in'] = True
-    return 'Teraz jesteś zalogowany.'
+    return 'Now you are logged in.'
 
 
 @app.route('/logout')
 def do_logout() -> str:
     session.pop('logged_in')
-    return 'Teraz jesteś wylogowany.'
+    return 'Now you are logged out.'
 
 
 @app.route('/search4', methods=['POST'])
@@ -36,7 +36,7 @@ def do_search() -> 'html':
     @copy_current_request_context
     @check_for_errors
     def log_request(req: 'flask_request', res: str) -> None:
-        """Loguje szczegóły żądania sieciowego oraz wynik."""
+        """Logging the details of request and result into db."""
         with UseDatabase(app.config['dbconfig']) as cursor:
             _SQL = """insert into log
                         (phrase, letters, ip, browser_string, results)
@@ -67,7 +67,7 @@ def do_search() -> 'html':
         t = Thread(target=log_request, args=(request, str(found_letters)))
         t.start()
     except Exception as err:
-        print('***** Logowanie się nie powiodło; wystąpił błąd:', str(err))
+        print('***** Logging failed; Error:', str(err))
     return render_template('results.html',
                            the_title=title,
                            the_phrase=phrase,
@@ -88,7 +88,7 @@ def entry_page() -> 'html':
 @check_logged_in
 @check_for_errors
 def view_the_log() -> 'html':
-    """Wyświetla zawartość pliku logu w postaci tabeli HTML."""
+    """Shows the contents of the database log in an HTML table."""
     with UseDatabase(app.config['dbconfig']) as cursor:
         _SQL = """select ts, phrase, letters, ip, browser_string, results from log"""
         cursor.execute(_SQL)
