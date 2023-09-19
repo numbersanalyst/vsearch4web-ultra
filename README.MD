@@ -24,3 +24,8 @@ py main.py
 Please install the following packages:
 * flask
 * mysql.connector
+
+And make sure you have imported the database from the database.sql file. With data the same as in the application configuration. If you have MariaDB or maybe MySQL installed, you can do this by typing:
+```
+mysql --user=vsearch --password=vsearchpasswd --database=vsearchlogDB < database.sql
+```
