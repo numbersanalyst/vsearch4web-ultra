@@ -1,6 +1,6 @@
 # Vsearch4Web ULTRA
 
-It's an improved and professional version of the vsearch4web application. Allows you to search for letters in a given phrase. Additionally, you can see amouth of found letters. You can also search with case sensitive or not. The aplication uses Python, Flask, SQL, MariaDB, Flowbite, Tailwind.
+It's an improved and professional version of the [vsearch4web](https://github.com/numbersanalyst/head-first-python) application. Allows you to search for letters in a given phrase. Additionally, you can see amouth of found letters. You can also search with case sensitive or not. The aplication uses Python, Flask, SQL, MariaDB, Flowbite, Tailwind.
 
 ## Entry page /
 ![entry page](github/entry_page.png)
