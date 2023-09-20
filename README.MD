@@ -2,6 +2,12 @@
 
 It's an improved and professional version of the [vsearch4web](https://github.com/numbersanalyst/head-first-python) application. Allows you to search for letters in a given phrase. Additionally, you can see amouth of found letters. You can also search with case sensitive or not. The aplication uses Python, Flask, SQL, MariaDB, Flowbite, Tailwind.
 
+## Features
+The application have many technical features, for example:
+* custom exceptions with messages
+* own db context manager
+* independently working logging system
+
 ## Entry page /
 ![entry page](github/entry_page.png)
 
